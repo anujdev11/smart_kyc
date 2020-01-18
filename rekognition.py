@@ -29,7 +29,7 @@ for text in textDetections:
         if(re.match(r'\d{4} \d{4} \d{4}',text['DetectedText']) and text['Type']=='LINE'):
             print('AADhar number:' + text['DetectedText'])
             aadhar_no=text['DetectedText']
-        if(re.search(r'[A-Z][a-z]{1,} [A-Z][a-z]{1,}\s*[a-zA-Z]*',text['DetectedText']) and 'GOV' not in text['DetectedText'] and 'Gov' not in text['DetectedText'] and ":" not in text['DetectedText'] and text['Type']=='LINE'):
+        if(re.search(r'[A-Z][a-z]{1,} [A-Z][a-z]{1,}\s*[a-zA-Z]*',text['DetectedText']) and 'GOV' not in text['DetectedText'] and ":" not in text['DetectedText'] and text['Type']=='LINE'):
             print("Name:",text['DetectedText'])
             name=text['DetectedText']
         if(re.match('\d{10}',text['DetectedText'])):
