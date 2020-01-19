@@ -32,6 +32,7 @@
                         document.getElementById('contact_Aadhar no').value=data[2];
                         document.getElementById('contact_Mobile no').value=data[3];
                         document.getElementById('contact_dob').value=data[4];
+                        document.getElementById('address').value=data[5];
                         
                 },
                 });
@@ -46,12 +47,11 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 iq-mtb-15">
                         <h3 class="text-center mb-5">Smart_KYC</h3>
-                        
-                        
                         <form id="contact" method="post" enctype="multipart/form-data">
                             <div class="contact-form">
                                 <div class="section-field mb-4 ">
-                                    <input type="file" name="file" class="form-control-file mb-0" id="exampleFormControlFile1">
+                                    Front Side: <input type="file" name="file" class="form-control-file mb-0" id="exampleFormControlFile1"><br>
+                                    Back Side: <input type="file" name="file1" class="form-control-file mb-0" id="exampleFormControlFile2"><br>
                                     <a href="#" id ="upload-file-btn" class="button float-right">Test</a>
                                 </div>
                                 <div class="section-field mt-2">
@@ -73,6 +73,10 @@
                                 <div class="section-field mt-2">
                                     <label for="formGroupExampleInput">Mobile no:   </label>
                                     <input class="require" id="contact_Mobile no" type="text" placeholder="" name="Mobile no">
+                                </div>
+                                <div class="section-field mt-2">
+                                    <label for="formGroupExampleInput">Full Address:   </label>
+                                    <input class="require" id="address" type="text" placeholder="" name="address">
                                 </div>
                                 
                             </div>
