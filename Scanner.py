@@ -23,9 +23,15 @@ class AdharExtract:
                  #storing processed image temporarily
                 cv2.imwrite('processed_image1.png',blurred)
 
+<<<<<<< HEAD
                 client = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id='your_key',
                       aws_secret_access_key='your_secret_key')
                 client1 = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id='your_key',
+=======
+                client = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id='your_access_key',
+                      aws_secret_access_key='your_secret_key')
+                client1 = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id='your_access_key',
+>>>>>>> 7c08209ba7fc783692042931b9573022031337d3
                       aws_secret_access_key='your_secret_key')
                  
                 with open("processed_image.png", "rb") as imageFile:	
