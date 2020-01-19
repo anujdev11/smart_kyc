@@ -23,10 +23,10 @@ class AdharExtract:
                  #storing processed image temporarily
                 cv2.imwrite('processed_image1.png',blurred)
 
-                client = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id='AKIAJUNDV4AEW3TWKQ6Q',
-                      aws_secret_access_key='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')
-                client1 = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id='AKIAJUNDV4AEW3TWKQ6Q',
-                      aws_secret_access_key='XUAM1Ngz8MsXHB9FS8Nc5ttPxItU6/DWLdg7YPS2')
+                client = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id='your_key',
+                      aws_secret_access_key='your_secret_key')
+                client1 = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id='your_key',
+                      aws_secret_access_key='your_secret_key')
                  
                 with open("processed_image.png", "rb") as imageFile:	
                         response=client.detect_text(Image={'Bytes': imageFile.read()})

@@ -1,9 +1,9 @@
 import boto3
 import re
-client = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id='AKIAJUNDV4AEW3TWKQ6Q',
-                      aws_secret_access_key='XUAM1Ngz8MsXHB9FS8Nc5ttPxItU6/DWLdg7YPS2')
+client = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id='your_key',
+                      aws_secret_access_key='your_secret_key')
 
-photo="sample1.jpg"
+photo="sample_back.jpeg"
 with open(photo, "rb") as imageFile:
         response = client.detect_text(Image={'Bytes': imageFile.read()})
         textDetections = response['TextDetections']
