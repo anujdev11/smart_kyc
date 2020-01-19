@@ -1,7 +1,7 @@
 import boto3
 import re
-client = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id='AKIAJUNDV4AEW3TWKQ6Q',
-                      aws_secret_access_key='XUAM1Ngz8MsXHB9FS8Nc5ttPxItU6/DWLdg7YPS2')
+client = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id='your_access_key',
+                      aws_secret_access_key='your_secret_key')
 
 photo="sample.jpeg"
 with open(photo, "rb") as imageFile:
