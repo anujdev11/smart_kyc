@@ -22,14 +22,8 @@ class AdharExtract:
                 blurred=cv2.GaussianBlur(gray,(5,5),0)  #(5,5) is the kernel size and 0 is sigma that determines the amount of blur
                  #storing processed image temporarily
                 cv2.imwrite('processed_image1.png',blurred)
-
-                client = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id='your_key',
-                      aws_secret_access_key='your_secret_key')
-                client1 = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id='your_key',
-                client = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id='your_access_key',
-                      aws_secret_access_key='your_secret_key')
-                client1 = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id='your_access_key',
-                      aws_secret_access_key='your_secret_key')
+                client = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id='Key',aws_secret_access_key='Key')
+                client1 = boto3.client('rekognition', region_name='us-east-1', aws_access_key_id='Key',aws_secret_access_key='Key')
                  
                 with open("processed_image.png", "rb") as imageFile:	
                         response=client.detect_text(Image={'Bytes': imageFile.read()})
